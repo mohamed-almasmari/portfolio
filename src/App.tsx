@@ -7,9 +7,10 @@ import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
-const App = () => {
+
+function App() {
   return (
-    <>
+    <div className="min-h-screen bg-slate-950">
       <Navbar />
 
       <main>
@@ -23,8 +24,8 @@ const App = () => {
       </main>
 
       <Footer />
-    </>
+    </div>
   );
-};
+}
 
 export default App;
