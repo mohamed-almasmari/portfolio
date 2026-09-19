@@ -6,38 +6,63 @@ type ProjectCardProps = {
 };
 
 function ProjectCard({ project }: ProjectCardProps) {
+  const visibleTechnologies = project.technologies.slice(0, 6);
+
+  const hiddenTechnologyCount =
+    project.technologies.length - visibleTechnologies.length;
+
   return (
-    <article className="rounded-xl border border-slate-800 bg-slate-950 p-6 md:p-8">
-      <p className="text-sm font-medium text-cyan-400">
-        {project.type}
-      </p>
+    <article className="rounded-xl border border-slate-800 bg-slate-950 p-6 transition hover:border-slate-700 md:p-8">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <p className="text-sm font-medium text-cyan-400">
+            {project.type}
+          </p>
 
-      <h3 className="mt-2 text-2xl font-bold md:text-3xl">
-        {project.title}
-      </h3>
+          <h3 className="mt-2 text-2xl font-bold md:text-3xl">
+            {project.title}
+          </h3>
+        </div>
 
-      <p className="mt-4 max-w-3xl leading-7 text-slate-400">
+        <span
+          className={`w-fit rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-wide ${
+            project.status === "Completed"
+              ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400"
+              : "border-cyan-500/30 bg-cyan-500/10 text-cyan-400"
+          }`}
+        >
+          {project.status}
+        </span>
+      </div>
+
+      <p className="mt-5 max-w-3xl leading-7 text-slate-400">
         {project.description}
       </p>
 
       <h4 className="mt-8 text-lg font-semibold">
-        Contributions
+        Key Contributions
       </h4>
 
       <ul className="mt-4 space-y-3 text-slate-400">
-        {project.contributions.map((contribution) => (
+        {project.contributions.slice(0, 3).map((contribution) => (
           <li
             key={contribution}
             className="flex gap-3"
           >
-            <span className="text-cyan-400">▹</span>
+            <span
+              className="text-cyan-400"
+              aria-hidden="true"
+            >
+              ▹
+            </span>
+
             <span>{contribution}</span>
           </li>
         ))}
       </ul>
 
       <div className="mt-8 flex flex-wrap gap-3">
-        {project.technologies.map((technology) => (
+        {visibleTechnologies.map((technology) => (
           <span
             key={technology}
             className="rounded-full bg-slate-800 px-4 py-2 text-sm text-slate-300"
@@ -45,6 +70,12 @@ function ProjectCard({ project }: ProjectCardProps) {
             {technology}
           </span>
         ))}
+
+        {hiddenTechnologyCount > 0 && (
+          <span className="rounded-full border border-slate-700 px-4 py-2 text-sm text-slate-400">
+            +{hiddenTechnologyCount} more
+          </span>
+        )}
       </div>
 
       <div className="mt-8">

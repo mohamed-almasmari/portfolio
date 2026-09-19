@@ -1,7 +1,10 @@
+export type ProjectStatus = "Completed" | "In Development";
+
 export type Project = {
   id: string;
   title: string;
   type: string;
+  status: ProjectStatus;
   description: string;
   overview: string;
   contributions: string[];
@@ -17,6 +20,7 @@ export const projects: Project[] = [
     id: "enterprise-data-platform",
     title: "Enterprise Data Platform",
     type: "Senior Capstone Project — Wayne State University",
+    status: "Completed",
 
     description:
       "A full-stack enterprise data platform designed to help users explore public policy data through interactive dashboards and data-driven interfaces.",
@@ -53,7 +57,8 @@ export const projects: Project[] = [
   {
     id: "jobpilot",
     title: "JobPilot",
-    type: "Full-Stack Personal Project — In Development",
+    type: "Full-Stack Personal Project",
+    status: "In Development",
 
     description:
       "A full-stack job discovery and application tracking platform designed to help job seekers discover opportunities, organize applications, and manage the job search process from one place.",
