@@ -12,16 +12,16 @@ function Projects() {
           Projects
         </p>
 
-        <h2 className="text-3xl font-bold md:text-4xl">
-          Projects I've Built
-        </h2>
+        <h2 className="text-3xl font-bold md:text-4xl">Projects I've Built</h2>
+
+        <p className="mt-4 max-w-2xl leading-7 text-slate-400">
+          A selection of software projects I've worked on, including full-stack
+          applications, data platforms, and projects currently in development.
+        </p>
 
         <div className="mt-10 space-y-8">
           {projects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-            />
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </div>

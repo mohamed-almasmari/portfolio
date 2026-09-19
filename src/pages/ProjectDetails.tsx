@@ -10,7 +10,7 @@ function ProjectDetails() {
 
   if (!project) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-slate-950 px-6 text-white">
+      <main className="flex min-h-[70vh] items-center justify-center bg-slate-950 px-6 text-white">
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
             404
@@ -26,7 +26,7 @@ function ProjectDetails() {
 
           <Link
             to="/#projects"
-            className="mt-8 inline-flex items-center gap-2 font-semibold text-cyan-400 transition hover:text-cyan-300"
+            className="mt-8 inline-flex font-semibold text-cyan-400 transition hover:text-cyan-300"
           >
             ← Back to Projects
           </Link>
@@ -36,21 +36,21 @@ function ProjectDetails() {
   }
 
   return (
-    <main className="min-h-screen bg-slate-950 px-6 py-16 text-white md:py-24">
+    <main className="bg-slate-950 px-6 py-16 text-white md:py-24">
       <div className="mx-auto max-w-6xl">
         <Link
           to="/#projects"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 transition hover:text-cyan-300"
+          className="inline-flex text-sm font-semibold text-cyan-400 transition hover:text-cyan-300"
         >
           ← Back to Projects
         </Link>
 
-        <section className="mt-10">
+        <header className="mt-10">
           <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
             {project.type}
           </p>
 
-          <h1 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">
+          <h1 className="mt-3 max-w-4xl text-4xl font-bold tracking-tight md:text-5xl">
             {project.title}
           </h1>
 
@@ -87,13 +87,27 @@ function ProjectDetails() {
                   href={project.liveDemo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-lg border border-slate-700 px-5 py-3 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
+                  className="rounded-lg border border-slate-700 px-5 py-3 font-semibold transition hover:border-cyan-400 hover:text-cyan-400"
                 >
                   Live Demo
                 </a>
               )}
             </div>
           )}
+        </header>
+
+        <section className="mt-16 border-t border-slate-800 pt-12">
+          <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
+            Overview
+          </p>
+
+          <h2 className="mt-3 text-2xl font-bold md:text-3xl">
+            About the Project
+          </h2>
+
+          <p className="mt-6 max-w-4xl leading-8 text-slate-400">
+            {project.overview}
+          </p>
         </section>
 
         <section className="mt-16 border-t border-slate-800 pt-12">
@@ -109,7 +123,7 @@ function ProjectDetails() {
             {project.contributions.map((contribution) => (
               <li
                 key={contribution}
-                className="flex gap-4 rounded-xl border border-slate-800 bg-slate-900 p-5 text-slate-300"
+                className="flex gap-4 rounded-xl border border-slate-800 bg-slate-900 p-5"
               >
                 <span
                   className="text-cyan-400"
@@ -118,13 +132,77 @@ function ProjectDetails() {
                   ▹
                 </span>
 
-                <span className="leading-7">
+                <span className="leading-7 text-slate-300">
                   {contribution}
                 </span>
               </li>
             ))}
           </ul>
         </section>
+
+        {project.highlights && project.highlights.length > 0 && (
+          <section className="mt-16 border-t border-slate-800 pt-12">
+            <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
+              Highlights
+            </p>
+
+            <h2 className="mt-3 text-2xl font-bold md:text-3xl">
+              Project Highlights
+            </h2>
+
+            <ul className="mt-8 space-y-4">
+              {project.highlights.map((highlight) => (
+                <li
+                  key={highlight}
+                  className="flex gap-4 text-slate-300"
+                >
+                  <span
+                    className="text-cyan-400"
+                    aria-hidden="true"
+                  >
+                    ✓
+                  </span>
+
+                  <span className="leading-7">
+                    {highlight}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {project.challenges && project.challenges.length > 0 && (
+          <section className="mt-16 border-t border-slate-800 pt-12">
+            <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
+              Engineering
+            </p>
+
+            <h2 className="mt-3 text-2xl font-bold md:text-3xl">
+              Challenges
+            </h2>
+
+            <ul className="mt-8 space-y-4">
+              {project.challenges.map((challenge) => (
+                <li
+                  key={challenge}
+                  className="flex gap-4 text-slate-300"
+                >
+                  <span
+                    className="text-cyan-400"
+                    aria-hidden="true"
+                  >
+                    ▹
+                  </span>
+
+                  <span className="leading-7">
+                    {challenge}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
       </div>
     </main>
   );
