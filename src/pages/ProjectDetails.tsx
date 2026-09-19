@@ -22,14 +22,14 @@ function ProjectDetails() {
     <main className="min-h-screen bg-slate-950 px-6 py-24 text-white">
       <div className="mx-auto max-w-6xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
-          Project
+          {project.type}
         </p>
 
-        <h1 className="mt-3 text-4xl font-bold">
+        <h1 className="mt-3 text-4xl font-bold md:text-5xl">
           {project.title}
         </h1>
 
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
+        <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400">
           {project.description}
         </p>
       </div>

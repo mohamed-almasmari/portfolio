@@ -1,7 +1,9 @@
 export type Project = {
   id: string;
   title: string;
+  type: string;
   description: string;
+  contributions: string[];
   technologies: string[];
   github?: string;
   liveDemo?: string;
@@ -9,47 +11,23 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "jobpilot",
-    title: "JobPilot",
+    id: "enterprise-data-platform",
+    title: "Enterprise Data Platform",
+    type: "Senior Capstone Project — Wayne State University",
     description:
-      "A full-stack job tracking application for organizing job applications and monitoring application progress.",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "Prisma",
+      "A full-stack enterprise data platform designed to help users explore public policy data through interactive dashboards and data-driven interfaces.",
+    contributions: [
+      "Collaborated with a team of student developers to design and build a full-stack enterprise data platform.",
+      "Built an automated ETL pipeline using public APIs to collect, process, and validate data.",
+      "Developed scripts for data import, validation, and database updates using PostgreSQL.",
+      "Designed and implemented dashboards and user interface components to display actionable data insights.",
     ],
-    github: "",
-  },
-
-  {
-    id: "ppa",
-    title: "Public Policy Analytics",
-    description:
-      "A data-driven web application developed as part of a senior capstone project for analyzing public policy and congressional district data.",
     technologies: [
-      "React",
-      "Python",
-      "Flask",
-      "PostgreSQL",
-      "Docker",
-    ],
-    github: "",
-  },
-
-  {
-    id: "weather-app",
-    title: "Weather App",
-    description:
-      "A React weather application that displays weather information in Fahrenheit.",
-    technologies: [
-      "React",
+      "React.js",
       "JavaScript",
-      "CSS",
-      "Weather API",
+      "PostgreSQL",
+      "Public APIs",
+      "ETL",
     ],
-    github: "",
   },
 ];
