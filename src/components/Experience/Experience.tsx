@@ -10,45 +10,52 @@ function Experience() {
         </p>
 
         <h2 className="text-3xl font-bold md:text-4xl">
-          Work Experience
+          Professional Experience
         </h2>
 
-        <div className="mt-10 max-w-4xl">
-          <div className="border-l border-slate-700 pl-6">
-            <div className="flex flex-col justify-between gap-2 md:flex-row">
-              <div>
-                <h3 className="text-2xl font-bold">
-                  Store Clerk
-                </h3>
+        <div className="mt-10 rounded-xl border border-slate-800 bg-slate-900 p-6 md:p-8">
+          <p className="text-sm font-medium text-cyan-400">Amazon Flex</p>
 
-                <p className="mt-1 text-cyan-400">
-                  Marathon Gas Station
-                </p>
+          <h3 className="mt-2 text-2xl font-bold md:text-3xl">
+            Delivery Partner
+          </h3>
 
-                <p className="mt-1 text-sm text-slate-500">
-                  Detroit, MI
-                </p>
-              </div>
-            </div>
+          <h4 className="mt-8 text-lg font-semibold">Key Responsibilities</h4>
 
-            <ul className="mt-6 space-y-3 text-slate-400">
-              <li className="flex gap-3">
-                <span className="text-cyan-400">▹</span>
-                <span>
-                  Delivered consistent customer service in a high-traffic
-                  retail environment.
-                </span>
-              </li>
+          <ul className="mt-4 space-y-3 text-slate-400">
+            <li className="flex gap-3">
+              <span className="text-cyan-400" aria-hidden="true">
+                ▹
+              </span>
 
-              <li className="flex gap-3">
-                <span className="text-cyan-400">▹</span>
-                <span>
-                  Operated the cash register accurately while managing
-                  transactions under pressure.
-                </span>
-              </li>
-            </ul>
-          </div>
+              <span>
+                Delivered 30,000+ packages while maintaining reliable and
+                accurate service.
+              </span>
+            </li>
+
+            <li className="flex gap-3">
+              <span className="text-cyan-400" aria-hidden="true">
+                ▹
+              </span>
+
+              <span>
+                Managed high-volume routes independently in a fast-paced
+                environment.
+              </span>
+            </li>
+
+            <li className="flex gap-3">
+              <span className="text-cyan-400" aria-hidden="true">
+                ▹
+              </span>
+
+              <span>
+                Used logistics and navigation tools to manage deliveries and
+                resolve route issues.
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
