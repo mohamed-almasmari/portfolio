@@ -1,4 +1,3 @@
-
 function Skills() {
   const skillGroups = [
     {
@@ -11,78 +10,98 @@ function Skills() {
         "CSS3",
         "Tailwind CSS",
         "React Router",
-        "Responsive Design",
+        "Redux Toolkit",
+        "RTK Query",
+        "React Hook Form",
       ],
     },
     {
       title: "Backend",
-      skills: ["Node.js", "Express 5", "REST APIs", "Mongoose", "MongoDB"],
-    },
-    {
-      title: "Databases",
-      skills: ["PostgreSQL", "MongoDB", "Prisma", "SQL", "Database Design"],
-    },
-    {
-      title: "API & Web Development",
       skills: [
-        "Fetch API",
-        "URLSearchParams",
-        "HTTP",
-        "JSON",
-        "CORS",
-        "CRUD",
-        "API Integration",
+        "Node.js",
+        "Express.js",
+        "REST APIs",
+        "JWT Authentication",
       ],
     },
     {
-      title: "Development Tools",
-      skills: ["Git", "GitHub", "VS Code", "Postman", "Vite", "npm"],
+      title: "Databases & Data",
+      skills: [
+        "PostgreSQL",
+        "Prisma ORM",
+        "SQL",
+        "Public API Integration",
+      ],
     },
     {
-      title: "Programming Concepts",
+      title: "DevOps & Tools",
       skills: [
-        "Object-Oriented Programming",
-        "Data Structures",
-        "Algorithms",
-        "Debugging",
-        "Problem Solving",
+        "Git",
+        "GitHub",
+        "Docker",
+        "Docker Compose",
+        "Vite",
+        "npm",
+      ],
+    },
+    {
+      title: "Testing",
+      skills: [
+        "React Testing Library",
         "Software Testing",
-        "Asynchronous JavaScript",
-        "Promises",
+        "Debugging",
+      ],
+    },
+    {
+      title: "Currently Exploring",
+      skills: [
+        "Redis",
+        "BullMQ",
+        "LLM APIs",
+        "Background Jobs",
+        "AI-Powered Applications",
       ],
     },
   ];
 
   return (
-    <section id="skills" className="scroll-mt-20 bg-slate-950 px-6 py-24 text-white">
+    <section
+      id="skills"
+      className="scroll-mt-20 bg-slate-950 px-6 py-24 text-white"
+    >
       <div className="mx-auto max-w-6xl">
         <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cyan-400">
           Skills
         </p>
 
-        <h2 className="text-3xl font-bold md:text-4xl">
-          Technologies & Skills
-        </h2>
+        <h2 className="text-3xl font-bold md:text-4xl">Technologies & Tools</h2>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <p className="mt-4 max-w-2xl leading-7 text-slate-400">
+          Technologies I use to build, test, and maintain modern full-stack web
+          applications.
+        </p>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group) => (
-            <div
+            <article
               key={group.title}
               className="rounded-xl border border-slate-800 bg-slate-900 p-6"
             >
-              <h3 className="text-xl font-semibold">{group.title}</h3>
+              <h3 className="text-lg font-semibold text-white">
+                {group.title}
+              </h3>
 
-              <div className="mt-4 flex flex-wrap gap-3">
+              <div className="mt-5 flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-lg border border-slate-700 px-4 py-2 text-sm text-slate-300"
+                    className="rounded-full border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-300"
                   >
                     {skill}
                   </span>
                 ))}
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
