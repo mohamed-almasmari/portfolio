@@ -2,7 +2,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="bg-slate-950 px-6 py-24 text-white md:py-32"
+      className="scroll-mt-20 bg-slate-950 px-6 py-24 text-white md:py-32"
     >
       <div className="mx-auto max-w-6xl">
         <div className="max-w-4xl">
