@@ -5,7 +5,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="bg-slate-900 px-6 py-24 text-white"
+      className="scroll-mt-20 bg-slate-900 px-6 py-24 text-white"
     >
       <div className="mx-auto max-w-6xl">
         <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-cyan-400">
