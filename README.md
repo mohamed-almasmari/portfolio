@@ -1,75 +1,137 @@
-# React + TypeScript + Vite
+# Mohamed Almasmari — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive developer portfolio built to showcase my software engineering experience, technical skills, education, and projects.
 
-Currently, two official plugins are available:
+## Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[View Portfolio](https://portfolio-eight-green-05wac7lp62.vercel.app/)
 
-## React Compiler
+## About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This portfolio highlights my work as a software engineer and Computer Science graduate from Wayne State University. It includes my technical skills, professional experience, education, and detailed pages for software projects I have built and am currently developing.
 
-## Expanding the ESLint configuration
+## Technologies
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- Vite
+- React Router
+- Tailwind CSS
+- HTML5
+- Git
+- GitHub
+- Vercel
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Responsive desktop and mobile design
+- React Router navigation
+- Dynamic project detail pages
+- Hash-based section navigation
+- Automatic scroll handling between routes
+- Responsive mobile navigation
+- Project status indicators
+- Education and professional experience sections
+- LinkedIn, GitHub, and Handshake links
+- Custom 404 handling
+- Vercel SPA routing support
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project Structure
 
+```text
+src/
+├── components/
+│   ├── About/
+│   ├── Contact/
+│   ├── Education/
+│   ├── Experience/
+│   ├── Footer/
+│   ├── Hero/
+│   ├── Navbar/
+│   ├── Projects/
+│   ├── ScrollToHash/
+│   ├── ScrollToTop/
+│   └── Skills/
+├── data/
+│   └── projects.ts
+├── layouts/
+│   └── RootLayout.tsx
+├── pages/
+│   ├── Home.tsx
+│   ├── NotFound.tsx
+│   └── ProjectDetails.tsx
+├── router/
+│   └── router.tsx
+├── index.css
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Install Node.js and npm.
 
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/mohamed-almasmari/portfolio.git
+cd portfolio
 ```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Projects
+
+### Enterprise Data Platform
+
+Senior capstone project focused on collecting, processing, storing, and presenting public policy data through a full-stack data platform.
+
+Technologies included React, JavaScript, Python, Flask, PostgreSQL, Docker, public APIs, and ETL pipelines.
+
+### JobPilot
+
+A full-stack job discovery and application tracking platform currently in development.
+
+The project is being designed with React, TypeScript, Node.js, Express.js, PostgreSQL, Prisma ORM, Redux Toolkit, RTK Query, and other modern development technologies.
+
+## Deployment
+
+The portfolio is deployed with Vercel and connected to the GitHub repository.
+
+Updates pushed to the `main` branch are automatically built and deployed by Vercel.
+
+## Contact
+
+- [GitHub](https://github.com/mohamed-almasmari)
+- [LinkedIn](https://www.linkedin.com/in/mohamed-almasmari-4b406622b/)
+- [Handshake](https://app.joinhandshake.com/profiles/fs5kwf)
+
+## Author
+
+**Mohamed Almasmari**  
+B.S. Computer Science — Wayne State University
